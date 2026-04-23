@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "student-result-management",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "npm run dev:server & npm run dev:client"
+  }
+}
