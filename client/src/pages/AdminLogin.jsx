@@ -21,8 +21,8 @@ const AdminLogin = () => {
       const { data } = await loginAdmin(form);
       login(data);
       navigate('/admin/dashboard');
-    } catch {
-      setError('Invalid username or password.');
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || 'Invalid username or password.');
     } finally {
       setLoading(false);
     }
